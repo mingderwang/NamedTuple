@@ -23,3 +23,11 @@ class MyCarWithMethods(Car):
 
 my_car = MyCarWithMethods('red', 3812.4)
 print(my_car.hexcolor())
+
+print('------- build in function -------')
+import json
+print(my_car._asdict())
+print(json.dumps(my_car._asdict()))
+your_car = my_car._replace(color='blue')
+print(your_car)
+print(your_car.hexcolor())
